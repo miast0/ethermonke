@@ -1,0 +1,16 @@
+# Repeat [[service]] for each port-based service.
+# Types defined by ethermonke: https, icmp, udp, ssh, ftp, dns, http, tcp.
+# ICMP has no port, so it cannot be used in a [[service]] entry.
+# TCP-only types: http, ssh, ftp, tcp. UDP-only type: udp.
+# HTTPS and DNS rules can match TCP or UDP on the configured port.
+# If no color is set, the type's default protocol color is used.
+# color sets both node and transmission colors; either specific color overrides it.
+# Colors must be quoted #RRGGBB strings.
+
+[[service]]
+name = "ServiceName"
+port = 8080
+type = "http"
+color = "#4DD153"
+node-color = "#4DD153"
+transmission-color = "#4DD153"
